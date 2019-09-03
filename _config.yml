@@ -22,14 +22,14 @@ favicon: https://raw.githubusercontent.com/FromEndWorld/LOFFER/master/images/fav
 
 # 菜单中的按钮
 navigation:
-  - name: Home
-    url: /
-  - name: Blog
-    url: /about
-  - name: Aprender
+  - name: Artigos
     url: /archive
-  - name: Sobre mim
+  - name: Projetos
+    url: /projects
+  - name: Aprenda
     url: /tags
+  - name: Sobre mim
+    url: /about
 
 # 每页的文章数
 paginate: 8
