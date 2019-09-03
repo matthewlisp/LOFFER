@@ -391,6 +391,7 @@ img {
   margin: 15px auto;
   color: $base-lighten-color;
   font-size: 16px;
+  padding: 0px 20px 0px 20px;
 
   @include mobile {
     margin: 10px auto;
@@ -403,10 +404,9 @@ img {
 
 nav {
   display: block;
-  margin-top: 23px; // @TODO: Vertically middle align
+  //margin-top: 23px; // @TODO: Vertically middle align
   font-family: $base-font;
   font-weight: 500;
-  font-size: 18px;
 
   @include mobile {
     margin-top: 9px;

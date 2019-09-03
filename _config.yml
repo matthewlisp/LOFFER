@@ -7,7 +7,7 @@
 # 井号后面的文字是说明文档，不会被程序读取。
 name: MatthewLisp
 # 描述/签名
-description: My personal website/blog
+description: Olá viajante! sou desenvolvedor web e fan da linguagem Clojure. Criei esse blog pra compartilhar tudo que sei com voce :)
 
 #
 # 下面的设定都是可选的
@@ -26,7 +26,7 @@ navigation:
     url: /
   - name: Blog
     url: /about
-  - name: Aprenda Clojure
+  - name: Aprender
     url: /archive
   - name: Sobre mim
     url: /tags
