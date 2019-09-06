@@ -61,14 +61,14 @@ footer-text: Copyright (c) 2019 MatthewLisp
 # 评论，注意，请不要同时添加多种不同的评论区
 
 # 输入Disqus shortname，即可添加评论区
-disqus: loffer #shortname
+disqus: # loffer #shortname
 
 # 输入Gitalk相关设定，即可添加评论区
 gitalk:
-  clientID: 
-  clientSecret: 
-  repo: 
-  owner: 
+  clientID: b6e0d03b13a7dc92e850
+  clientSecret: 3c980227d385b23d7ea6a28679759d5fc1171676
+  repo: matthewlisp.github.io
+  owner: matthewlisp
 
 # 输入Google Analytics web tracking code
 google_analytics:
