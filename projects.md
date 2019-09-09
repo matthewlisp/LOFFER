@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Meus projetos
+title: My projects
 permalink: /projects/
 ---
 
-TODO: Colocar meus projetos aqui.
+TODO: fill this page with my projects.
