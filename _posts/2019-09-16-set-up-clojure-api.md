@@ -1,12 +1,13 @@
 ---
 layout: post
-title: How to set-up a simple API with Clojure
+title: How to build APIs with Clojure
 date: 2019-09-16
 Author: MatthewLisp
 tags: [learn]
 comments: true
 toc: true
 pinned: false
+excerpt: Learn what you need and how to start developing your own API in clojure using this guide.
 ---
 ## Introduction
 **What this guide will cover?**<br/>
@@ -32,9 +33,9 @@ You're going to see that the way we are doing is very manual and you have to set
 * Make sure you have [Leiningen](https://leiningen.org/) installed and off course [Clojure](https://clojure.org/guides/getting_started)<br/>
 
 **What if i don't have yet what's needed?**<br/>
-I recommend you take a look on the resources i've curated to learn clojure and at least understand the language core aspects: https://github.com/matthewlisp/learn-clojure
+I recommend you take a look on the resources i've curated to learn clojure and at least understand the language core aspects: [https://github.com/matthewlisp/learn-clojure](https://github.com/matthewlisp/learn-clojure)
  
-***I strongly suggest that you follow the guide while replicating all steps on your machine.***
+***I strongly suggest that you follow the guide while replicating all steps on your machine. Here's the [github repo](https://github.com/matthewlisp/clj-api-template) of the entire code***
 
 ## How libraries are organized
 It's nice to know how libraries are organized in clojure, because this will help you understand your namespace definitions and how to navigate inside documentations.<br/>
