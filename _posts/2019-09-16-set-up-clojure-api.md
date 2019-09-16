@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Guide]How to: set-up a simple API with Clojure
+title: How to: set-up a simple API with Clojure
 date: 2019-09-16
 Author: MatthewLisp
 tags: [learn]
@@ -240,11 +240,15 @@ So, basically, ***my-routes*** is just a ring handler! we can pass 'several hand
 
 1. Be sure your REPL is in the ***app.core*** namespace
 2. If ***my-routes*** return a Ring handler, then it's a function, let's see
+
+
 ```
 app.core> my-routes
 #function[compojure.core/routes/fn--2512]
 ```
+
 3. Yup! it's a function, and it's a Ring handler, so we can pass an HTTP request map? sure we can, let's use the one i paste here before:
+
 ```
 app.core> 
 (my-routes                          ; I've ommited the header info to shorten the code
@@ -372,6 +376,7 @@ The rest is pretty much self explanatory, i've used the ***response*** function 
 * Update your core.clj using the code above
 * Open the terminal on the project folder and do: lein run
 * Open another terminal window and usgin the curl tool, we are going to check the debug endpoint:
+
 ```
 $ curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:3000/debug
 ```
