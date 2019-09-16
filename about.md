@@ -11,9 +11,9 @@ I started my journey around 3 years ago *(January of 2017)*, simply because i ha
 
 In 2018 i discovered functional programming and Lisp by reading[ HTDP](https://htdp.org/2019-02-24/). I had found a language that i loved and i was excited to use it professionally, turns out that the practical modern lisp was: **Clojure**!
 
-This year (2019) i dedicated full time to learn clojure and back-end for the web. To have more time to do this i've also droped university since it felt i wasn't learning enough there.
+This year (2019) i dedicated full time to learn clojure and back-end for the web.
 
-Although i'm still just an apprentice, i want to share my knowledge and my journey with everyone!
+I'm here to share my knowledge and my journey with everyone!
 
 ### Contact
 
