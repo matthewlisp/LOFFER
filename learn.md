@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Learn clj
+permalink: /learn/
 ---
 
 ## Learning resources
