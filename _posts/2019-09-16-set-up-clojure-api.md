@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to: set-up a simple API with Clojure
+title: How to set-up a simple API with Clojure
 date: 2019-09-16
 Author: MatthewLisp
 tags: [learn]

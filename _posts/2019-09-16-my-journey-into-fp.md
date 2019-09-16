@@ -5,7 +5,7 @@ date: 2019-09-16
 Author: MatthewLisp
 tags: [coding]
 comments: true
-toc: false
+toc: true
 pinned: false
 ---
 Everybody knows functional programming requires a shift in the way you reason about your code. And i was told this when i started learning it back in 2017 when i first tried FP using JavaScript.
@@ -16,6 +16,7 @@ But as time passed, i saw more and more people talking about FP in Javascript, a
 
 Then, a guy from the [FreeCodeCamp](https://www.freecodecamp.org/) discord channel told me to read [How to Design Programs](https://www.htdp.org/2019-02-24/), said there i would learn how to really write a program. Months later in 2018 i took it very seriously, not because of FP, that's the irony, the reason i started reading **HTDP** book was because i was coding and designing a front-end page with JS in a modular way, using various files, trying to load animations asynchronously, and [i did finish the project](https://github.com/matheusfcunha/random-quote-machine-modularJS) i felt i was bad in reasoning how things have to connect the pieces together in software and code. So i decided to dive into HTDP, as the book introduction promissed giving the right piece of knowledge to go forward into this.
 
+## test
 
 After starting to read, i was super excited because i've found that the book uses a functional language to teach (a variant of Lisp) so i was eager to find out what was all about.</br>
 
