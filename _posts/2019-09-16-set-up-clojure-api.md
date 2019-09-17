@@ -239,8 +239,8 @@ The ***routes*** function, as the compojure [API documentation](http://weavejest
 
 So, basically, ***my-routes*** is just a ring handler! we can pass 'several handlers' as arguments to ***routes*** function, and compojure have some macros ready for this, one of them is ***GET***, as you can see, the syntax is self explanatory, just keep in mind that what those macros returns under the hood is actually a response map, to proof this we are going to make something, bear with me, open up a REPL and do these steps:
 
-1. Be sure your REPL is in the ***app.core*** namespace
-2. If ***my-routes*** return a Ring handler, then it's a function, let's see
+* Be sure your REPL is in the ***app.core*** namespace
+* If ***my-routes*** return a Ring handler, then it's a function, let's see
 
 
 ```
@@ -248,7 +248,7 @@ app.core> my-routes
 #function[compojure.core/routes/fn--2512]
 ```
 
-3. Yup! it's a function, and it's a Ring handler, so we can pass an HTTP request map? sure we can, let's use the one i paste here before:
+* Yup! it's a function, and it's a Ring handler, so we can pass an HTTP request map? sure we can, let's use the one i paste here before:
 
 ```
 app.core> 
