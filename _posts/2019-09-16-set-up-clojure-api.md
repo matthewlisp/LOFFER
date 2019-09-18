@@ -94,7 +94,7 @@ Before we start the server, we need to write how this will happen.<br/>
 Open the core.clj file at: **src/app/core.clj**
 
 replace everything with this:
-```
+```clojure
 (ns app.core
   (:require [ring.adapter.jetty :refer [run-jetty]]))
 
