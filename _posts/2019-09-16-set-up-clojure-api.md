@@ -74,14 +74,14 @@ We are going to use the [Ring](https://github.com/ring-clojure/ring) library, Ri
 
 Inside your *project.clj* edit the **:dependencies** key to the following:
 
-```
+```clojure
 :dependencies [[org.clojure/clojure "1.10.0"] 
                [ring "1.7.1"]] 
 ```
 
 You can always download the dependencies you add to your project opening the terminal and running the command: 
 
-```
+```bash
 lein deps
 ```
 
@@ -128,7 +128,7 @@ Finally, we are defining a ***main*** function, which will be executed when we r
 
 Alright. Before we finally turn the server on, we need to specify to Leinigen (which we will use to run our code) that we do have a main function that should run by default. <br/>
 Open the ***project.clj*** file again, and add this right before the enclosing parenthesis: 
-```
+```clojure
 :main app.core
 ```
 This is telling leiningen as i said, that there is a main function, on the namespace app.core<br/>
@@ -136,7 +136,7 @@ This is telling leiningen as i said, that there is a main function, on the names
 Remember, if you get stucked, check how the code is written in the [Github repo](https://github.com/matthewlisp/clj-api-template) of this guide.<br/>
 
 Let's try to run the server now, open the terminal inside your project folder and run the command:
-```
+```bash
 lein run
 ```
 If everything went smooth, open up your browser and go to: [localhost:3000](localhost:3000)<br/>
@@ -147,7 +147,7 @@ Ok, before we proceed, it's important to know how the HTTP requests are represen
 
 The easiest way to do this is by looking at the request, to do that, we're going to use a clojure function that prints data to the terminal in a more readable way, let's update our namespace require definitions:
 
-```
+```clojure
 (ns app.core
   (:require [ring.adapter.jetty :refer [run-jetty]]
             [clojure.pprint :refer [pprint]]))
@@ -155,7 +155,7 @@ The easiest way to do this is by looking at the request, to do that, we're going
 
 And now, let's update our handler function, because this is the function that receives our HTTP request:
 
-```
+```clojure
 (defn handler [request]
   (clojure.pprint/pprint request) ; Prints the request on the console 
   {:status 200
@@ -167,7 +167,7 @@ Remember that what our functions returns is the last expression, and that means 
 
 Now, while the server is running, you can look at the terminal window and see how the HTTP request is represented, let's take a look:
 
-```
+```clojure
 {:ssl-client-cert nil,
  :protocol "HTTP/1.1",
  :remote-addr "127.0.0.1",
@@ -203,7 +203,7 @@ We have a very known routing library in clojure, it's specially made for Ring. T
 
 To start using it, let's update our ***project.clj*** file again, at the ***:dependencies*** key of the map, add:
 
-```
+```clojure
 [compojure "1.6.1"]
 ```
   
@@ -213,7 +213,7 @@ I recommend that later you take a deeper look at it's documentation.
 
 Before we start creating routes, we have to update again our namespace require definitions, take a look:
 
-```
+```clojure
 (ns app.core
   (:require [ring.adapter.jetty :refer [run-jetty]]
             [clojure.pprint     :refer [pprint]]
@@ -223,7 +223,7 @@ Before we start creating routes, we have to update again our namespace require d
 
 What is happening here? I've added two functions from compojure.core and one from compojure.route, we're going to see them in action now as i create our http routes:
 
-```
+```clojure
 (def my-routes 
   (routes
    (GET  "/endpoint-a"  [] "<h1>Hello endpoint A</h1>")
@@ -281,7 +281,7 @@ Well, this says pretty much everything, and why we need this function? It's beca
 
 Alright, the last thing we have to do is replace the handler used by ***run-jetty*** in our ***main*** function, simply because ***my-routes*** returns a handler and this handler takes care now of routing and that's what we wanted in this section, in the end our code is looking like this now: 
 
-```
+```clojure
 (ns app.core
   (:require [ring.adapter.jetty :refer [run-jetty]]
             [clojure.pprint     :refer [pprint]]
@@ -315,13 +315,13 @@ ForJSON the two critical middlewares comes from the [Ring-JSON](https://github.c
 
 But as always, before we use it, we have to update our ***project.clj*** again by importing this lib in our project, open the file and at the ***:dependencies*** key of the map, add:
 
-```
+```clojure
 [ring/ring-json "0.5.0"]
 ```
 
 Cool. Because this iteration on our code makes many modifications, i'll paste it here and we are going to breakdown the changes, here we go:
 
-```
+```clojure
 (ns app.core
   (:require [ring.adapter.jetty   :refer [run-jetty]]
             [clojure.pprint       :refer [pprint]]
@@ -355,7 +355,7 @@ Before we discuss the changes in our routes, let's see this new definition that 
 
 What is this doing? this is **wrapping middlewares** to our ***my-routes*** handler. And i'm using the threading macro ***->*** because otherwise this code would start being ugly to read, as we possibly will need more middlewares in the future, and things would start being like this:
 
-```
+```clojure
 (wrap-blablabla (wrap-json-bdoy (wrap-json-response my-routes)))
 ```
 
@@ -378,13 +378,13 @@ The rest is pretty much self explanatory, i've used the ***response*** function 
 * Open the terminal on the project folder and do: lein run
 * Open another terminal window and usgin the curl tool, we are going to check the debug endpoint:
 
-```
+```bash
 $ curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:3000/debug
 ```
 
 The output:<br/>
 
-```
+```bash
 {:ssl-client-cert nil,
  :protocol "HTTP/1.1",
  :remote-addr "127.0.0.1",
@@ -414,11 +414,11 @@ As you can see, now our ***:body*** key has a value of our JSON encoded request,
 
 Let's also test one of our endpoints, the */endpoint-a*:
 
-```
+```bash
 $ curl http://localhost:3000/endpoint-a
 ```
 The output:<br/>
-```
+```bash
 {"foo":"bar"}
 ```
 
